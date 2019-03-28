@@ -1,0 +1,41 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Paytm Application</display-name>
+	<servlet>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>com.EvryIndia.Controller.EV_LoginServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>UserRegistration</servlet-name>
+		<servlet-class>com.EvryIndia.Controller.EV_RegisterServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>AddMoney</servlet-name>
+		<servlet-class>com.EvryIndia.Controller.EV_AddMoney</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>UserRegistration</servlet-name>
+		<url-pattern>/userRegistration</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddMoney</servlet-name>
+		<url-pattern>/AddMoney</url-pattern>
+	</servlet-mapping>
+	
+	
+	<welcome-file-list>
+		<welcome-file>/userRegistration.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
